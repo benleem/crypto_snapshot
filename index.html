@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="img/logo.png" />
+		<title>Crypto Snapshot</title>
+	</head>
+	<body>
+		<section class="wrapper">
+			<div class="search_bar">
+				<div class="header">
+					<h1
+						style="
+							color: white;
+							font-family: 'Orbitron', sans-serif;
+							font-size: 30px;
+							text-align: center;
+						"
+					>
+						Crypto Snapshot
+					</h1>
+					<img src="img/logo.png" alt="Snapshot" style="width: 40px" />
+				</div>
+				<input
+					type="text"
+					placeholder="Search for crypto..."
+					class="input_text"
+					style="
+						width: 400px;
+						max-width: 100%;
+						height: 40px;
+						padding-left: 10px;
+					"
+				/>
+			</div>
+			<div class="legend_wrapper">
+				<p
+					class="mobile"
+					style="color: white; cursor: pointer; width: fit-content"
+				>
+					Legend
+				</p>
+				<div class="legend">
+					<p class="mobile_coin" style="color: white">Coin</p>
+					<p class="legend_price">Price</p>
+					<p class="legend_changeDay">%Change(24h)</p>
+					<p class="legend_changeWeek">%Change(7d)</p>
+					<p class="legend_volume">Volume</p>
+					<p class="legend_cap">Mkt Cap</p>
+				</div>
+			</div>
+			<div class="data_error">
+				<p>Something went wrong...</p>
+			</div>
+			<div class="error">
+				<p>We don't have any data for this input</p>
+			</div>
+			<div class="loading">
+				<p>Loading...</p>
+			</div>
+			<div class="listings"></div>
+		</section>
+		<button class="scroll_top">
+			<img src="img/uparrow.png" alt="To top" />
+		</button>
+		<script src="script.js"></script>
+	</body>
+</html>

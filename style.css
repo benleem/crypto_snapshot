@@ -1,0 +1,385 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border-spacing: 0;
+}
+
+body {
+	background-color: rgb(29, 31, 33);
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+}
+
+nav li {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+nav img {
+	width: 100px;
+}
+
+nav a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	height: 10vh;
+	margin-left: 10px;
+}
+
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.header img {
+	padding-left: 10px;
+}
+
+/* Input */
+
+.search_bar {
+	padding: 100px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Legend */
+.legend_wrapper {
+	position: sticky;
+	top: 0;
+	font-family: "Orbitron", sans-serif;
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	background-color: rgb(29, 31, 33);
+}
+
+.legend {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	color: white;
+	font-size: 10px;
+	background-color: rgb(29, 31, 33);
+	padding: 10px 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.mobile,
+.mobile_coin {
+	display: none;
+}
+
+.legend_price,
+.legend_changeDay,
+.legend_changeWeek {
+	width: 100px;
+	text-align: end;
+}
+
+.legend_volume,
+.legend_cap {
+	width: 150px;
+	text-align: end;
+}
+
+/* Error */
+
+.error,
+.loading,
+.data_error {
+	flex: 1 1 auto;
+	width: 100%;
+	color: white;
+	font-family: "Orbitron", sans-serif;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.error.active {
+	display: none;
+}
+
+.data_error {
+	display: none;
+}
+
+.data_error.active {
+	display: flex;
+}
+
+/* Loading */
+
+.loading {
+	display: none;
+}
+
+.loading.active {
+	display: flex;
+}
+
+/* Listings */
+
+.listings {
+	padding-bottom: 100px;
+	font-family: "Poppins", sans-serif;
+}
+
+.result_row {
+	display: flex;
+	justify-items: start;
+	width: 100%;
+	padding: 15px 0;
+	border-bottom: 1px solid grey;
+	color: grey;
+	font-size: 16px;
+}
+
+.coin {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding-right: 25px;
+}
+
+.coin img {
+	width: 30px;
+	padding-right: 10px;
+}
+
+.coin h2 {
+	width: 155px;
+	font-size: 16px;
+	color: white;
+}
+
+.ticker {
+	text-transform: uppercase;
+}
+
+.details {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.price,
+.change_24h,
+.change_7d {
+	width: 100px;
+	text-align: end;
+}
+
+.volume,
+.cap {
+	width: 150px;
+	text-align: end;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+/* Scroll to top */
+
+.scroll_top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	height: 30px;
+	width: 30px;
+	z-index: 99;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 0;
+	box-shadow: none;
+	transition: all 0.3s ease-in-out;
+	background-color: white;
+}
+
+.scroll_top:hover {
+	background-color: rgb(162, 245, 200);
+}
+
+.scroll_top img {
+	z-index: 100;
+	width: 75%;
+}
+
+@media screen and (max-width: 1200px) {
+	.wrapper {
+		padding: 0 3%;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.green {
+		color: rgb(0, 255, 67);
+	}
+
+	.search_bar {
+		padding: 50px 0;
+	}
+
+	.legend_wrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 10px 0;
+	}
+
+	.legend {
+		flex-direction: column;
+		max-height: 0px;
+		overflow: hidden;
+		justify-items: start;
+		max-width: 250px;
+		width: 100%;
+		border: 1px solid rgb(162, 245, 200);
+		margin: 5px;
+		border-radius: 10px;
+		background-color: rgb(65, 190, 125);
+		transition: all 0.5s ease-in-out;
+		padding: 0;
+	}
+
+	.legend p {
+		font-size: 14px;
+		padding: 5px 0;
+		color: black;
+	}
+
+	.legend_changeDay {
+		color: red !important;
+	}
+
+	.legend_changeWeek {
+		color: rgb(0, 255, 67) !important;
+	}
+
+	.legend.active {
+		max-height: 170px;
+	}
+
+	.mobile {
+		font-size: 16px;
+	}
+
+	.mobile,
+	.mobile_coin {
+		display: flex;
+	}
+
+	.legend_price,
+	.legend_changeDay,
+	.legend_changeWeek {
+		width: fit-content;
+		text-align: center;
+	}
+
+	.legend_volume,
+	.legend_cap {
+		width: fit-content;
+		text-align: center;
+	}
+
+	.listings {
+		justify-content: center;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto;
+	}
+
+	.result_row {
+		justify-items: start;
+		flex-direction: column;
+		max-width: 250px;
+		width: 100%;
+		border: 2px solid rgb(162, 245, 200);
+		margin: 5px;
+		border-radius: 10px;
+		background-color: rgb(65, 190, 125);
+		color: black;
+	}
+
+	.coin {
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding-right: 0;
+	}
+
+	.coin img {
+		width: 30px;
+		padding: 0;
+	}
+
+	.coin h2 {
+		text-align: center;
+		width: fit-content;
+		padding: 0 10px;
+	}
+
+	.details {
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.price,
+	.change_24h,
+	.change_7d,
+	.volume,
+	.cap {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 345px) {
+	.header {
+		flex-direction: column;
+	}
+
+	.header h1 {
+		padding-bottom: 10px;
+	}
+
+	.header img {
+		padding-left: 0;
+	}
+}
