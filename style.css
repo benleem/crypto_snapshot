@@ -5,7 +5,8 @@
 	border-spacing: 0;
 }
 
-body {
+body,
+html {
 	background-color: rgb(29, 31, 33);
 }
 
